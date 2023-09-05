@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CANDY SHOP</title>
+  <style>
+   body {
+      font-family: MV boli, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+    header {
+    border: 2px solid;
+    position: absolute;
+    top: 10;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 5%;
+    background-color:#b4fdfd;
+    box-shadow: var(--box-shadow);
+    }
+    nav {
+      background-color: #b4fdfd;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+    h1{
+      color: #000000;
+    }
+    h2 {
+      color: #000000;
+      border-bottom: 2px solid #ff7ee1;
+      padding-bottom: 4px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1.5px solid #f47ee1;
+      border-radius: 4px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #ff7ee1;
+      color: #000000;
+      border: none;
+      border-radius: 7px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: 2px solid;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 5%;
+      border :solid;
+      border-color: #000000;
+
+    box-shadow: var(--box-shadow);
+    }
+
+    button:hover {
+      background-color: #b4fdfd;
+      border: #000000;
+      border: solid;
+      border-radius: 2xp solid;
+    }
+
+    footer {
+    background-color: #b4fdfd;
+    color: #000000;
+    text-align: center;
+    padding: .2rem;
+    border: solid;
+
+  }
+  </style>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const thankYouMessage = document.createElement("p");
+      thankYouMessage.textContent = "Thanks for letting us know 🥰!";
+      form.parentNode.replaceChild(thankYouMessage, form);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1><nav>
+          <a href="index.html"> Home|</a>
+          <a href="cart.html">Cart|</a>
+          <a href="about us.html">About Us|</a>
+          <a href="index.html">Sign Out|</a>
+  </header>
+
+  <main>
+    <section id="contact-info">
+      <h2>Contact Information</h2>
+      <ul>
+        <li><strong>Address:</strong> Rajahmundry, Andhra Pradesh, India</li>
+        <li><strong>Phone:</strong> 145-786-899</li>
+        <li><strong>Email:</strong> mohanscandyshop@gmail.com</li>
+      </ul>
+    </section>
+    <section id="contact-form">
+      <h2>Tell us about our FOOD 😋</h2>
+      <form action="#" method="post" onsubmit="handleSubmit(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+     <p>&copy; Mohan's CANDY SHOP </p>
+  </footer>
+</body>
+</html>
